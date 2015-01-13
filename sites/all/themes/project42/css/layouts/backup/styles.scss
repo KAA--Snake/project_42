@@ -1,0 +1,104 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+@import "normalize";
+
+/* Layout rules */
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */
+$zen-column-count: 7;
+$zen-gutter-width: 10px;
+#page{
+    @include zen-grid-container;
+    
+}
+.header {
+  @include zen-grid-item(7, 1);
+  @include zen-clear();
+  height: 270px;
+  border: 7px solid #fff;
+  /*float: left;*/
+  width: 100%;
+  margin-top: 20px;
+  /*margin-left: 0%;
+  margin-right: -100%;*/
+  clear: left;
+  padding: 5px 5px 10px 5px;
+  margin-bottom: 10px;
+}
+body{
+  background: #1174b6;
+}
+#logo{
+  float: left;
+}
+.header_inner_wrap{
+  background-image: url(../images/bg_cell.png);
+  position: relative;
+  width:100%;
+  height: 100%;
+  /*margin:auto;*/
+  margin-left: -3px;
+  border: 3px solid #fff;
+}
+.header_right_block{
+  float: right;
+  margin-top: 12px;
+}
+.header__logo{
+  margin-left: 18px;
+  margin-top: 15px;
+}
+.header__logo-image,.head_pic42{
+  width: 80%;
+}
+.article42{
+  margin: -65px 0 0 -75px;
+  color: #fff;
+  font-family: "Myriad Pro";
+  font-size: 70px;
+  font-weight: 400;
+}
+#main{
+  @include zen-grid-item(7, 1);
+  @include zen-clear();
+}
+.planet_pic{
+  height: 257px;
+
+}
+.content_wrap{
+  border: 7px solid #fff;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+}
+#content{
+  background-image: url(../images/bg_cell.png);
+  position: relative;
+  width:100%;
+  height: 100%;
+  /*margin:auto;*/
+
+  border: 3px solid #fff;
+}
+footer{
+  @include zen-grid-item(7,1);
+  @include zen-clear();
+}

@@ -1,0 +1,429 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+@import "normalize";
+
+/* Layout rules */
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */
+$zen-column-count: 7;
+$zen-gutter-width: 10px;
+#page{
+    @include zen-grid-container;
+    
+}
+body{
+   background: #1174b6;
+}
+
+//--------------begin of header-----------------
+
+.header {
+  @include zen-grid-item(7, 1);
+  @include zen-clear();
+  /*height: 270px;*/
+  border: 7px solid #fff;
+  /*float: left;*/
+  width: 100%;
+  margin-top: 20px;
+  /*margin-left: 0%;
+  margin-right: -100%;*/
+  clear: left;
+  padding: 5px 5px 10px 5px;
+  margin-bottom: 10px;
+}
+
+#logo{
+  float: left;
+  width: 30%;
+}
+.header_inner_wrap{
+  background-image: url(../images/bg_cell.png);
+  position: relative;
+  width:100%;
+  height: 100%;
+  /*margin:auto;*/
+  margin-left: -3px;
+  /*padding-bottom: 21px;*/
+  border: 3px solid #fff;
+  display: table;
+}
+.header_right_block{
+  float: right;
+  margin-top: 2%;
+  max-width: 100%;
+  height: auto;
+  width: 17%;
+}
+.header__logo{
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.header__logo-image,.head_pic42{
+  width: 80%;
+}
+
+#block-system-main-menu{
+  position: relative;
+  top: 72px;
+
+}
+.article42{
+  margin: -70px 0 0 -115px;
+  color: #fff;
+  font-family: "GOSTType B";
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.menu__link{
+  text-decoration: none;
+  color: #FFF;
+  font-family: "GOSTType B";
+  font-size: 36px;
+  font-weight: 400;
+  float: left;
+  margin-right: 15px;
+   padding-bottom: 6px;
+
+}
+.menu__link:hover{
+  text-decoration: underline;
+}
+.menu__item{
+  list-style-type: none;
+  list-style-image: none;
+}
+.main_menu{
+  width: 40%;
+  margin: auto;
+}
+
+//----------------end of header-------------------
+
+#main{
+  @include zen-grid-item(7, 1);
+  @include zen-clear();
+}
+.planet_pic{
+  /*height: 257px;*/
+
+}
+.content_wrap{
+  border: 7px solid #fff;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+}
+#content{
+  background-image: url(../images/bg_cell.png);
+  position: relative;
+  width:100%;
+  height: 100%;
+  /*margin:auto;*/
+
+  border: 3px solid #fff;
+}
+footer{
+  @include zen-grid-item(7,1);
+  @include zen-clear();
+}
+
+
+.page__title{
+  color: #FFF;
+  font-family: "GOSTType B";
+  font-size: 60px;
+  font-weight: 400;
+}
+.text_area_wrapper{
+  background: none repeat scroll 0 0 #1174b6;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  float: left;
+  padding: 2% 1%;
+  position: relative;
+  /*top: -50%;*/
+  width: 50%;
+  margin-top: -40%;
+}
+.text_area{
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  padding: 4%;
+  color: #FFF;
+  font-family: "GOSTType B";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  hyphens: auto;
+
+}
+
+//-----------begin of ramka--------------------
+.ramka{
+  float: right;
+  margin-right: -13px;
+  margin-bottom: -27px;
+  width: 40%;
+}
+.ramka table{
+  float: right;
+  width: 100%;
+}
+.ramka table td{
+  border: 3px solid #fff;
+  text-wrap: none;
+  flex-wrap: nowrap;
+}
+.center_field{
+  // Style for "Coming soon..."
+  line-height: 36px;
+  /*padding-left: 10px;
+  padding-right: 65px;*/
+  color: #FFF;
+  font-family: 'GOSTType B';
+  font-size: 24px;
+  font-weight: 400;
+}
+.bottom_field1, .bottom_field2, .upper_field1, .upper_field2{
+  // Style for "In AppStore"
+  color: #FFF;
+  font-family: "GOSTType B";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+.bottom_field1{
+  width: 62%;
+}
+//------------------end of ramka---------------
+
+//------------------begin of projects page----------------
+.projects_wrap{
+  width: 90%;
+  margin: auto;
+  padding: 1%;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background: #1174b6;
+  margin-bottom: 3%;
+
+}
+.projects_text_wrap{
+  width: 40%;
+  float: left;
+  margin-left: -5%;
+  margin-right: 2%;
+}
+.projects_text{
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 3% 0;
+  color: #FFF;
+  font-family: "GOSTType B";
+  font-size: 20px;
+  font-weight: 400;
+}
+.projects_icon{
+  float: left;
+  width: 25%;
+}
+.projects_icon_icon{
+  width: 50%;
+  height: auto;
+}
+.projects_icon_logo{
+  color: #FFF;
+  font-family: "GOSTType B";
+  font-size: 24px;
+  font-weight: 400;
+}
+.projects_img{
+  float: left;
+  width:37%;
+  clear: right;
+  img{
+    margin: 5% 0;
+    border-radius: 4%;
+    border: 1px solid #fff;
+  }
+}
+.projects_clearfix{
+  clear: both;
+}
+//------------------end of projects page----------------
+
+//-----------------begin of media max480----------------
+@media screen and (max-width: 480px) {
+
+  //---------------------begin of header max480----------
+  .header_right_block{
+    display: none;
+  }
+
+  .main_menu{
+    width: 92%;
+    padding-left: 10%;
+    .menu__link{
+      font-size: 1.2em;
+    }
+  }
+  .header__logo-image,.head_pic42{
+    width: 100%;
+  }
+  #block-system-main-menu{
+    margin-left: 25%;
+    top: 0px;
+  }
+  //--------------------------end of header max480-------------
+  //--------------------------begin of ramka max480------------
+  .ramka{
+    float: right;
+    width: 65%; // 45% если для главной, иначе надпись не влезает в оду строку
+    margin-right: -13px;
+    table{
+      float: right;
+    }
+    .center_field{
+      line-height: 18px;
+      padding-left: 5px;
+      padding-right: 20px;
+      color: #FFF;
+      font-size: 14px;
+    }
+    .bottom_field1, .bottom_field2, .upper_field1, .upper_field2{
+      font-size: 12px;
+      line-height: 14px;
+    }
+    .bottom_field1{
+      width: 66%;
+    }
+  }
+  //-------------------------end of ramka max480----------------
+  .page__title{
+    font-size: 30px;
+  }
+  .text_area_wrapper{
+    margin-top: 0;
+    width: 98%;
+    .text_area{
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+  //---------------------------begin of projects page max480-----------
+ /* .projects_text_wrap{
+      width: 75%;
+    }
+  .projects_img{
+    width: 90%;
+    img{
+      padding: 3%;
+    }
+  }*/
+
+  .projects_text_wrap{
+    width:90%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .projects_text{
+    padding: 3% 0;
+    font-size: 14px;
+    margin: auto;
+  }
+  .projects_icon{
+    float: none;
+    width: 100%;
+  }
+  .projects_icon_icon{
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .projects_icon_logo{
+    text-align: center;
+    color: #FFF;
+    font-family: "GOSTType B";
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .projects_img{
+    margin: 10px auto;
+    float: none;
+    width:90%;
+    img{
+      margin-bottom: 5px;
+    }
+  }
+  .projects_clearfix{
+    clear: none;
+  }
+  //---------------------------end of projects page max480----------
+}
+
+//-----------------end of media max480----------------
+
+@media screen and (min-width:481px) and (max-width:800px) {
+
+  #block-system-main-menu{
+    position: relative;
+    top: 0px;
+    left: -40px;
+  }
+  .article42{
+    margin: -70px 0 0 -95px;
+    /*font-size: 70px;*/
+  }
+
+  .menu__link{
+    /*font-size: 36px;*/
+    padding-bottom: 3%;
+  }
+
+  .main_menu{
+   /* width: 40%;
+    margin: auto;*/
+  }
+
+  .projects_icon_icon{
+    width: 95%;
+  }
+  .projects_text_wrap{
+    float: right;
+    margin-bottom: 2%;
+    width: 68%;
+  }
+  .projects_img{
+    float: none;
+    width: 80%;
+    margin: 1% auto;
+  }
+  .ramka{
+    clear: left;
+    width: 60%;
+  }
+
+}
